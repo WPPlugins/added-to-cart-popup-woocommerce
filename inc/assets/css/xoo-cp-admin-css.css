@@ -1,0 +1,105 @@
+.xoo-cp-form h2{
+    background-color: #4C4C4C;
+    padding: 11px;
+    color: white;
+}
+.xoo-cp-main-settings {
+    float: left;
+    padding: 20px;
+    width: 70%;
+    max-width: 1200px;
+}
+
+.xoo-cp-form label{
+    font-style: italic;
+    margin-left: 10px;
+}
+
+/***   ***/
+.xoo-cp-sidebar{
+    width: 25%;
+    max-width: 250px;
+    float: left;
+    margin-top: 54px;
+    padding: 10px;
+    box-shadow: 1px 1px 3px 0px;
+    text-align: center;
+    margin-left: 10px;
+}
+.xoo-chhead{
+    margin-bottom: 10px;
+    display: block;
+    font-size: 20px;
+}
+.xoo-chicon{
+    height: 34px;
+    width: 34px;
+    font-size: 34px;
+}
+.xoo-chtxt {
+    font-size: 16px;
+    margin-right: 24px;
+    line-height: 25px;
+}
+.xoo-more-plugins{
+    margin-top: 4px;
+}
+/* End sidebar */
+
+/*** Tabs ***/
+
+.settings-tab{
+    display: none;
+}
+.settings-tab-active{
+    display: block;
+}
+
+
+
+.xoo-tabs{
+    border-bottom: 1px solid #ccc;
+}
+.xoo-tabs ul{
+    display: inline-block;
+    margin: 0;
+}
+.xoo-tabs li{
+    display: inline-block;
+    padding: 10px;
+    margin-left: 3px;
+    background-color: #4C4C4C;
+    color: white;
+    font-weight: 600;
+    font-size: 17px;
+    margin-bottom: 0;
+    cursor: pointer
+}
+
+li.tab-1{
+    margin-left: 0;
+}
+.xoo-tabs .active-tab{
+    background-color: #2d84d4;
+}
+/**          ***/
+
+.prem-disabled{
+    opacity: 0.9;
+    cursor: not-allowed;
+    overflow: hidden;   
+}
+
+@media only screen and (max-width: 1260px) {
+    .prem-disabled{
+        overflow: initial;
+    }
+}
+
+.xoo-hero-btns{
+    display: table;
+    margin: 10px auto;
+}
+.xoo-hero-btns a{
+    margin-right: 15px!important;
+}

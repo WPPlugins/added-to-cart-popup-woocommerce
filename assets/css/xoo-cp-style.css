@@ -1,0 +1,329 @@
+/** Fonts **/
+
+@font-face {
+  font-family: 'Xoo-Cart-PopUp';
+  src:  url('fonts/Xoo-Cart-PopUp.eot?q1vf1r');
+  src:  url('fonts/Xoo-Cart-PopUp.eot?q1vf1r#iefix') format('embedded-opentype'),
+    url('fonts/Xoo-Cart-PopUp.ttf?q1vf1r') format('truetype'),
+    url('fonts/Xoo-Cart-PopUp.woff?q1vf1r') format('woff'),
+    url('fonts/Xoo-Cart-PopUp.svg?q1vf1r#Xoo-Cart-PopUp') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.xcp-icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'Xoo-Cart-PopUp' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.xcp-icon-spinner:before {
+  content: "\e97a";
+}
+.xcp-icon-spinner2:before {
+  content: "\e97b";
+}
+.xcp-icon-cross:before {
+  content: "\ea0f";
+}
+.xcp-icon-checkmark:before {
+  content: "\ea10";
+}
+.xcp-icon-cancel-circle:before {
+  content: "\ea0d";
+}
+
+/** -- **/
+.xoo-cp-opac {
+    z-index: 99998;
+    background-color: black;
+    opacity: 0.6;
+    position: fixed;
+    display: none;
+}
+.xoo-cp-opac,.xoo-cp-modal , .xoo-cp-cont-opac{
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.xoo-cp-modal {
+    position: fixed;
+    text-align: center;
+    z-index: 99998;
+    overflow: auto;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.7);
+}
+
+.xoo-cp-active{
+    transition: visibility 0.4s ease-out, opacity 0.4s ease-out, transform 0.4s ease-out;
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.xoo-cp-cont-opac{
+    z-index: 1;
+    background-color: white;
+    opacity: 0.5;
+    position: absolute;
+}
+
+.xoo-cp-modal:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em;
+}
+
+.xoo-cp-container {
+    display: inline-block;
+    max-width: 650px;
+    border: #a0a0a0 solid 1px;
+    background: #fff;
+    position: relative;
+    vertical-align: middle;
+    width: 90%;
+    text-align: left;
+    box-shadow: 0 0 10px rgba(0,0,0,.4);
+    border-radius: 5px;
+    overflow: auto;
+    padding: 15px;
+}
+i.xoo-cp-close {
+    font-size: 17px;
+    color: red;
+    cursor: pointer;
+    position: absolute;
+    top: 3px;
+    right: 3px;
+}
+.xoo-cp-success, .xoo-cp-error {
+    padding: 10px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    display: block;
+    text-align: left;
+}
+.xoo-cp-error {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+    margin-top: 10px;
+}
+.xoo-cp-success {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+}
+.xoo-cp-atcn{
+    margin: 15px 0;
+    overflow: auto;
+}
+
+.xoo-cp-btns{
+    margin: 0 auto;
+    clear: both;
+    text-align: center;
+}
+a.xcp-btn{
+    width: 30%;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+    padding: 8px 12px;
+    display: inline-block;
+}
+td.xoo-cp-pqty{
+    min-width: 120px;
+}
+@keyframes xoo-cp-spin {
+    100%{ transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+.xcp-icon-spinner2{
+    animation: xoo-cp-spin 575ms infinite linear;
+    display: inline-block;
+}
+.xoo-cp-atc-icon{
+    margin-left: 5px;
+}
+td.xoo-cp-ptitle a{
+    font-weight: 600;
+    font-size: 18px;
+}
+td.xoo-cp-pimg{
+    width: 20%;
+}
+.xoo-cp-pdetails{
+    margin-top: 20px;
+    width: 100%;
+    display: block;
+    overflow: auto;
+}
+td.xoo-cp-pprice{
+    font-size: 20px;
+    margin: 15px 0;
+    width: 15%;
+}
+
+.xoo-cp-pdetails td.xoo-cp-remove{
+    width: 5%;
+    font-size: 20px;
+}
+
+.xoo-cp-pdetails td{
+    vertical-align: middle;
+    text-align: center;
+}
+
+.xoo-cp-pdetails td.xoo-cp-ptitle{
+    text-align: left;
+}
+
+.xoo-cp-ptotal{
+    display: table;
+    float: right;
+    margin-right: 25px;
+    font-size: 18px;
+    padding: 10px 0;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+}
+.xcp-ptotal{
+    font-size: 23px;
+}
+td.xoo-cp-remove .xcp-icon{
+    font-size: 20px;
+    color: #ea0a0a;
+    cursor: pointer;
+}
+
+td.xoo-cp-ptitle{
+    width: 45%;
+    padding-left: 5px;
+}
+.xcp-outspin{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 2;
+    animation: xoo-cp-spin 575ms infinite linear;
+    font-size: 45px;
+}
+
+@keyframes xoo-cp-spin {
+     from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+@-ms-keyframes xoo-cp-spin {
+    from { -ms-transform: rotate(0deg); }
+    to { -ms-transform: rotate(360deg); }
+}
+@-moz-keyframes xoo-cp-spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes xoo-cp-spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+
+.xoo-cp-outer{
+    display: none;
+}
+.xoo-cp-variations{
+    font-size: 13px;
+}
+
+.xoo-cp-variations .variation {
+    overflow: auto;
+    margin-top: 5px;
+}
+.xoo-cp-variations .variation dt{
+    margin: 0 5px 0 0;
+    float: left;
+}
+.xoo-cp-variations .variation dd{
+    margin: 0 10px 0 0;
+    float: left;
+}
+/* When screen size is less than 500px */
+@media only screen and (max-width: 500px) {
+    a.xcp-btn{
+        width: 80%;
+        margin: 5px 0;
+    }
+    td.xoo-cp-pprice , span.xcp-ptotal , .xoo-cp-ptotal{
+        font-size: 15px;
+
+    }
+    td.xoo-cp-pimg{
+        display: none;
+    }
+}
+
+
+span.xcp-minus {
+    border-right-width: 1px;
+    border-right-style: solid;
+}
+span.xcp-plus {
+    border-left-width: 1px;
+    border-left-style: solid;
+}
+span.xcp-plus, span.xcp-minus {
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    float: left;
+    width: 21px;
+}
+
+
+
+input[type=number].xoo-cp-qty{
+    border: 0!important;
+    text-align: center;
+    display: inline-block;
+    max-width: 30px;
+    float: left;
+    height: 100%;
+    line-height: 100%;
+    padding: 0;
+}
+input.xoo-cp-qty::-webkit-outer-spin-button,
+input.xoo-cp-qty::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+.xoo-cp-qtybox{
+    border-width: 1px;
+    border-style: solid;
+    position: relative;
+    display: inline-block;
+    font-weight: 700;
+    max-width: 90px;
+    height: 37px;
+    line-height: 35px;
+}
